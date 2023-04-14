@@ -1,4 +1,5 @@
+require "fabri.plugins" 
 require "fabri.options"
 require "fabri.keymaps"
-require "fabri.plugins" 
 require "fabri.colorscheme"
+require "fabri.ncmp"
