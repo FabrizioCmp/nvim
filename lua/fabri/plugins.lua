@@ -38,33 +38,40 @@ packer.init {
 
 -- Install your plugins here
 return packer.startup(function(use)
-  -- My plugins
-  use "wbthomason/packer.nvim" -- Have packer manage itself
-  use "nvim-lua/popup.nvim" -- An implementation of the Popup API from vim in Neovim
-  use "nvim-lua/plenary.nvim" -- Useful lua functions used ny lots of plugins
+    use "wbthomason/packer.nvim" -- Have packer manage itself
+    use "nvim-lua/popup.nvim" -- An implementation of the Popup API from vim in Neovim
+    use "nvim-lua/plenary.nvim" -- Useful lua functions used ny lots of plugins
 
 
-		--colorschemes
-  use "lunarvim/colorschemes"
-  use 'folke/tokyonight.nvim'
-  use 'morhetz/gruvbox'
+    --colorschemes
+    use "lunarvim/colorschemes"
+    use 'folke/tokyonight.nvim'
+    use 'morhetz/gruvbox'
+		
+		-- autocomplition
+    use 'neovim/nvim-lspconfig'
+    use 'hrsh7th/cmp-nvim-lsp'
+    use 'hrsh7th/cmp-buffer'
+    use 'hrsh7th/cmp-path'
+    use 'hrsh7th/cmp-cmdline'
+    use 'hrsh7th/nvim-cmp'
+	  use "rafamadriz/friendly-snippets" -- useful snippets
 
-  use 'neovim/nvim-lspconfig'
-  use 'hrsh7th/cmp-nvim-lsp'
-  use 'hrsh7th/cmp-buffer'
-  use 'hrsh7th/cmp-path'
-  use 'hrsh7th/cmp-cmdline'
-  use 'hrsh7th/nvim-cmp'
-	use "rafamadriz/friendly-snippets" -- useful snippets
-
-  use 'L3MON4D3/LuaSnip'
-  use 'saadparwaiz1/cmp_luasnip'
+    use 'L3MON4D3/LuaSnip'
+    use 'saadparwaiz1/cmp_luasnip'
 
 
-  -- Automatically set up your confi:guration after cloning packer.nvim
-  -- Put this at the end after all plugins
-  if packer_bootstrap then
-    require("packer").sync()
-  end
+		use 'onsails/lspkind.nvim'
+
+	  -- managing & installing lsp servers, linters & formatters
+    use("williamboman/mason.nvim") -- in charge of managing lsp servers, linters & formatters
+    use("williamboman/mason-lspconfig.nvim") -- bridges gap b/w mason & lspconfig 
+
+
+    -- Automatically set up your confi:guration after cloning packer.nvim
+    -- Put this at the end after all plugins
+    if packer_bootstrap then
+      require("packer").sync()
+    end
 end)
 
