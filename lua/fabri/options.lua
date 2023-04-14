@@ -12,4 +12,5 @@ vim.opt.wrap = false		-- disable line wrapping
 
 
 
-opt.iskeyword:append("-") -- consider string-string as whole word
+vim.opt.iskeyword:append("-") -- consider string-string as whole word
+vim.opt.termguicolors = true
