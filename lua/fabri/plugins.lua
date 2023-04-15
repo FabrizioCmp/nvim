@@ -42,6 +42,11 @@ return packer.startup(function(use)
     use "nvim-lua/popup.nvim" -- An implementation of the Popup API from vim in Neovim
     use "nvim-lua/plenary.nvim" -- Useful lua functions used ny lots of plugins
 
+		use("tpope/vim-surround") -- add, delete, change surroundings 
+    use("inkarkat/vim-ReplaceWithRegister") -- replace with register contents using motion (gr + motion)
+		
+		-- commenting with gc
+    use("numToStr/Comment.nvim")
 
     --colorschemes
     use "lunarvim/colorschemes"
@@ -59,6 +64,9 @@ return packer.startup(function(use)
 
     use 'L3MON4D3/LuaSnip'
     use 'saadparwaiz1/cmp_luasnip'
+		
+
+		use 'nvim-tree/nvim-tree.lua'
 
 
 		use 'onsails/lspkind.nvim'
