@@ -48,11 +48,18 @@ return packer.startup(function(use)
 		-- commenting with gc
     use("numToStr/Comment.nvim")
 
+		-- file icons
+		use "nvim-tree/nvim-web-devicons"
+
+
     --colorschemes
     use "lunarvim/colorschemes"
     use 'folke/tokyonight.nvim'
     use 'morhetz/gruvbox'
 		
+		-- statusline
+		use "nvim-lualine/lualine.nvim"
+
 		-- autocomplition
     use 'neovim/nvim-lspconfig'
     use 'hrsh7th/cmp-nvim-lsp'
