@@ -9,4 +9,5 @@ require "fabri.nvim-tree"
 require "fabri.comment"
 require "fabri.lualine"
 require "fabri.telescope"
-
+require "fabri.autopairs"
+require "fabri.treesitter"

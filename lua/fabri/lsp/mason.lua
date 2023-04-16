@@ -9,6 +9,8 @@ if not mason_lspconfig_status then
 end
 
 
+
+
 mason.setup()
 
 mason_lspconfig.setup({
@@ -21,4 +23,5 @@ mason_lspconfig.setup({
 				"lua_ls"
 		}
 })
+
 
