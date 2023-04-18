@@ -27,7 +27,7 @@ vk.set("n", "<leader>tn", ":tabn<CR>") --  go to next tab
 vk.set("n", "<leader>tp", ":tabp<CR>") --  go to previous tab
 
 -- file explorer
-vk.set("n", "<leader>e", ":Lex 30<cr>") -- toggle file explorer
+vk.set("n", "<leader>e", ":NvimTreeToggle<CR>") -- toggle file explorer
 
 --telescope
 vk.set("n", "<leader>ff", "<cmd>Telescope find_files<cr>") -- find files within current working directory, respects .gitignore

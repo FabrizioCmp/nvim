@@ -84,4 +84,8 @@ require'lspconfig'.lua_ls.setup {
 	
 }
 
-require'lspconfig'.java_language_server.setup{}
+-- java 
+  -- init.lua
+--   require'lspconfig'.jdtls.setup{
+-- 		capabilities = capabilities
+-- }

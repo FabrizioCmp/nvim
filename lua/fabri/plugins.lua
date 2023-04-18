@@ -56,6 +56,7 @@ return packer.startup(function(use)
     use "lunarvim/colorschemes"
     use 'folke/tokyonight.nvim'
     use 'morhetz/gruvbox'
+		use 'lunarvim/horizon.nvim'
 		
 		-- statusline
 		use "nvim-lualine/lualine.nvim"
@@ -78,6 +79,7 @@ return packer.startup(function(use)
 		-- telescope
 		use({ "nvim-telescope/telescope-fzf-native.nvim", run = "make" }) -- dependency for better sorting performance
     use({ "nvim-telescope/telescope.nvim", branch = "0.1.x" }) -- fuzzy finder
+		
 
 
 		use 'onsails/lspkind.nvim'
@@ -85,6 +87,7 @@ return packer.startup(function(use)
 	  -- managing & installing lsp servers, linters & formatters
     use("williamboman/mason.nvim") -- in charge of managing lsp servers, linters & formatters
     use("williamboman/mason-lspconfig.nvim") -- bridges gap b/w mason & lspconfig 
+		use 'mfussenegger/nvim-jdtls' -- for Java lsp 
 
 		  -- formatting & linting
     use("jose-elias-alvarez/null-ls.nvim") -- configure formatters & linters
