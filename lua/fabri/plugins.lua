@@ -106,6 +106,12 @@ return packer.startup(function(use)
     use("windwp/nvim-autopairs") -- autoclose parens, brackets, quotes, etc...
     use({ "windwp/nvim-ts-autotag", after = "nvim-treesitter" }) -- autoclose tags
 
+		-- terminal
+		use {"akinsho/toggleterm.nvim", tag = '*', config = function()
+		require("toggleterm").setup()
+		end}
+
+
     -- Automatically set up your confi:guration after cloning packer.nvim
     -- Put this at the end after all plugins
     if packer_bootstrap then

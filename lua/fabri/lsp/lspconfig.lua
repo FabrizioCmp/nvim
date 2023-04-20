@@ -25,7 +25,7 @@ local on_attach = function(client, bufnr)
   keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, opts) -- see available code actions
   keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, opts) -- see available code actions, in visual mode will apply to selection
   keymap.set("n", "<leader>rn", ":IncRename ", opts) -- smart rename
-  keymap.set("n", "<leader>D", "<cmd>Telescope diagnostics bufnr=0<CR>", opts) -- show  diagnostics for file
+  keymap.set("n", "<leader>e", "<cmd>Telescope diagnostics bufnr=0<CR>", opts) -- show  diagnostics for file
   keymap.set("n", "<leader>d", vim.diagnostic.open_float, opts) -- show diagnostics for line
   keymap.set("n", "[d", vim.diagnostic.goto_prev, opts) -- jump to previous diagnostic in buffer
   keymap.set("n", "]d", vim.diagnostic.goto_next, opts) -- jump to next diagnostic in buffer
@@ -85,7 +85,6 @@ require'lspconfig'.lua_ls.setup {
 }
 
 -- java 
-  -- init.lua
---   require'lspconfig'.jdtls.setup{
--- 		capabilities = capabilities
--- }
+  require'lspconfig'.jdtls.setup{
+		capabilities = capabilities
+}
