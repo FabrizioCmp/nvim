@@ -36,14 +36,10 @@ vk.set("n", "<leader>fc", "<cmd>Telescope grep_string<cr>") -- find string under
 vk.set("n", "<leader>fb", "<cmd>Telescope buffers<cr>") -- list open buffers in current neovim instance
 vk.set("n", "<leader>fh", "<cmd>Telescope help_tags<cr>") -- list available help tags
 
+-- formatting
+vk.set('n', '<leader>F', ':lua vim.lsp.buf.formatting_sync()<cr>')
 
 ----INSERT----
-
-
-
-
-
-
 
 ----VISUAL----
 
